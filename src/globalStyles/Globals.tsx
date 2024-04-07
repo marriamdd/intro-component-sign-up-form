@@ -8,10 +8,15 @@ const Globals = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-
+  body{
+  background: #FF7979;
+}
   body, button {
     font-family: 'Poppins', sans-serif;
-    background: #FF7979;
+
+  }
+  html{
+    font-size: 62.5%;
   }
 `;
 

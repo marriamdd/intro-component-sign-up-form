@@ -18,19 +18,19 @@ const IntroDiv = styled.div`
   padding: 5rem 2rem;
 
   h1 {
-    width: 327px;
-    height: 80px;
-    font-size: 28px;
+    width: 32.7rem;
+    height: 8rem;
+    font-size: 2.8rem;
     font-weight: 700;
-    line-height: 36px;
+    line-height: 3.6rem;
     letter-spacing: -0.292px;
     margin-bottom: 2rem;
   }
   p {
-    width: 327px;
+    width: 32.7rem;
     font-size: 16px;
     font-weight: 500;
-    line-height: 26px;
+    line-height: 2.6rem;
     margin-bottom: 2rem;
   }
 `;
