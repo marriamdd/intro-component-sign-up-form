@@ -16,8 +16,9 @@ const Globals = createGlobalStyle`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media only screen and (min-width: 769px){
+  @media only screen and  (min-width: 768px){
     background-image: url(/images/bg-intro-desktop.png);
+
 
   }
 }
@@ -27,6 +28,7 @@ const Globals = createGlobalStyle`
   }
   html{
     font-size: 62.5%;
+   
   }
 `;
 

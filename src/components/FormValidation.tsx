@@ -20,7 +20,6 @@ export default function FormValidation() {
   const [emailAddressError, setEmailAddressError] = useState<boolean>(false);
   const [passwordError, setPasswordError] = useState<boolean>(false);
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     let globalError = false;
@@ -141,6 +140,11 @@ const Form = styled.form`
   justify-content: center;
   gap: 1rem;
 
+  @media screen and (min-width: 768px) {
+    width: 54rem;
+    height: 56.2rem;
+  }
+
   button {
     width: 27.9rem;
     height: 5.6rem;
@@ -154,6 +158,11 @@ const Form = styled.form`
     font-size: 15px;
     line-height: 26px;
     margin-top: 1rem;
+    cursor: pointer;
+    @media screen and (min-width: 768px) {
+      width: 46rem;
+      height: 5.6rem;
+    }
   }
 `;
 const Click_Info = styled.div`
@@ -161,6 +170,9 @@ const Click_Info = styled.div`
   font-size: 1.1rem;
   line-height: 2.1rem;
   margin-bottom: 1rem;
+  @media screen and (min-width: 768px) {
+    width: 36.7rem;
+  }
   p {
     color: #bab7d4;
     text-align: center;
@@ -181,6 +193,13 @@ const Input = styled.input<{ error?: boolean }>`
   border: ${(props) => (props.error ? "1px solid red" : "1px solid #dedede")};
   padding-left: 2rem;
   margin-top: 1rem;
+
+  @media screen and (min-width: 768px) {
+    width: 46rem;
+    height: 5.6rem;
+    margin-top: 3rem;
+    background-position: 40rem;
+  }
 `;
 
 const ErrorMessage = styled.p<{ error?: boolean }>`
@@ -194,4 +213,7 @@ const ErrorMessage = styled.p<{ error?: boolean }>`
   margin-left: 10rem;
 
   display: ${(props) => (props.error ? "block" : "none")};
+  @media screen and (min-width: 768px) {
+    margin-left: 24rem;
+  }
 `;

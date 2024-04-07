@@ -24,14 +24,26 @@ const SuggestDiv = styled.div`
   align-items: center;
   justify-content: center;
   margin-inline: 2.3rem;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 2rem;
+    width: 54rem;
+    height: 6rem;
+    margin-top: 4rem;
+  }
+
   p {
-    span {
-      font-style: normal;
-      font-weight: 400;
-    }
+    font-weight: 400;
     width: 19.4rem;
     text-align: center;
     font-style: normal;
-    font-weight: 700;
+    span {
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 54rem;
+    }
   }
 `;
