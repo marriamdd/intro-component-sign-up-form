@@ -1,13 +1,64 @@
 import styled from "styled-components";
-
+import { ChangeEvent, useState } from "react";
+import { FormEvent } from "react";
 export default function FormValidation() {
+  interface IInput {
+    FirstName: string;
+    LastName: string;
+    EmailAddress: string;
+    Password: string;
+  }
+  const [inputValues, setInputValues] = useState<IInput>({
+    FirstName: "",
+    LastName: "",
+    EmailAddress: "",
+    Password: "",
+  });
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!inputValues.FirstName) {
+      console.log("carieli");
+    }
+  };
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setInputValues({
+      ...inputValues,
+      [name]: value,
+    });
+  };
   return (
-    <Form>
-      <input type="text" placeholder="First Name" name="First Name" />
-      <input type="text" placeholder="Last Name" name="Last Name" />
-      <input type="email" placeholder="Email Address" name="Email Address" />
-      <input type="password" placeholder="Password" name="Password" />
-      <button>CLAIM YOUR FREE TRIAL</button>
+    <Form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="First Name"
+        name="FirstName"
+        value={inputValues.FirstName}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        placeholder="Last Name"
+        name="LastName"
+        value={inputValues.LastName}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        placeholder="Email Address"
+        name="EmailAddress"
+        value={inputValues.EmailAddress}
+        onChange={handleChange}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        name="Password"
+        value={inputValues.Password}
+        onChange={handleChange}
+      />
+      <button type="submit">CLAIM YOUR FREE TRIAL</button>
       <Click_Info>
         <p>
           By clicking the button, you are agreeing to our{" "}
