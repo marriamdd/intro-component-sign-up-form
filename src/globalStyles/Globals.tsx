@@ -13,6 +13,9 @@ const Globals = createGlobalStyle`
   background-image: url(/images/bg-intro-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media only screen and (min-width: 769px){
     background-image: url(/images/bg-intro-desktop.png);
 
