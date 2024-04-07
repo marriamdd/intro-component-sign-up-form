@@ -10,6 +10,13 @@ const Globals = createGlobalStyle`
   }
   body{
   background: #FF7979;
+  background-image: url(/images/bg-intro-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media only screen and (min-width: 769px){
+    background-image: url(/images/bg-intro-desktop.png);
+
+  }
 }
   body, button {
     font-family: 'Poppins', sans-serif;
