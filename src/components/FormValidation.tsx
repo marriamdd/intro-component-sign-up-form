@@ -52,9 +52,9 @@ export default function FormValidation() {
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    name == " FirstName" && setFirstNameError(false);
+    name == "FirstName" && setFirstNameError(false);
     name == "LastName" && setLastNameError(false);
-    name == " EmailAddress" && setEmailAddressError(false);
+    name == "EmailAddress" && setEmailAddressError(false);
     name == "Password" && setPasswordError(false);
     setInputValues({
       ...inputValues,
